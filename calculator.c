@@ -9,7 +9,11 @@
 
 int main(int argc, char *argv[])
 {
-    int opt;
+  printf("This is a calculator\n");
+  printf("Enter /h for help.\n");
+  printf("Please enter sum(num1, num2, num3, ... , numn); ,and press enter.\n");
+
+  int opt;
     struct option longopts[] = {
       {"initilalize", 0, NULL, 'i'},
       {"file", 1, NULL, 'f'},
@@ -40,9 +44,5 @@ int main(int argc, char *argv[])
     for(; optind < argc; optind++)
         printf("argument: %s\n", argv[optind]);
 
-
-    printf("This is a calculator\n");
-    printf("Enter /h for help.\n");
-    printf("Please enter sum(num1, num2, num3, ... , numn); ,and press enter.\n");
     return 0;
 }
