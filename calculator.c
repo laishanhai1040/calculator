@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
       {"list", 0, NULL, 'l'},
       {"restart", 0, NULL, 'r'},
       {0, 0, 0, 0}
-    }
+    };
 
     while((opt = getopt_long(argc, argv, ":if:lr", longopts, NULL)) != -1) {
       switch(opt) {
@@ -38,11 +38,11 @@ int main(int argc, char *argv[])
     }
 
     for(; optind < argc; optind++)
-        printf("argument: %s\n", argv[opting]);
+        printf("argument: %s\n", argv[optind]);
 
 
     printf("This is a calculator\n");
     printf("Enter /h for help.\n");
-    printf("Please enter sum(num1, num2, num3, ... , numn); ,and press enter.\n");:
+    printf("Please enter sum(num1, num2, num3, ... , numn); ,and press enter.\n");
     return 0;
 }
